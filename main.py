@@ -27,7 +27,7 @@ if __name__ == '__main__':
 
             # 特定のチャンネルで特定の人が発言した場合にのみout_chat_idで発言をする
             if chat_id == config.in_chat_id and sender_id == config.sync_bot_id:
-                time.sleep(60)
+                time.sleep(240)
                 await client.send_message(config.out_chat_id, '/pin update')
                 await client.send_message(config.in_chat_id, 'このチャンネルでのピン留めの更新を検知したので、集積所にも更新をしました。(実験的)')
 
